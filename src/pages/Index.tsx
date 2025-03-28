@@ -1,12 +1,18 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { Toaster } from "sonner";
+import TopNav from "@/components/TopNav";
+import ChatList from "@/components/ChatList";
+import BottomNav from "@/components/BottomNav";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="flex flex-col h-screen bg-gray-100">
+      <TopNav />
+      <div className="flex-1 overflow-y-auto">
+        <ChatList />
       </div>
+      <BottomNav />
+      <Toaster position="top-center" />
     </div>
   );
 };
